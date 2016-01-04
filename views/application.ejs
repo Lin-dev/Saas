@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dev Match</title>
+
+    <link href="/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"><i class="fa fa-users"></i> Dev Match</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="main-navbar-collapse">
+          <div class="nav navnar-nav navbar-right">
+            <% if (login) {%>
+              <a href="/users/logOut" class="btn btn-primary navbar-btn">Log Out</a>
+            <%} else{ %>
+              <a href="/users/logIn" class="btn btn-primary navbar-btn">Log In</a>
+              <a href="/users/signUp" class="btn btn-success navbar-btn">Sign Up</a>
+            <%}%>
+
+          </div>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/about">About</a></li>
+            <li><a href="/contacts/new">Contact Us</a></li>
+          </ul>
+
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+		<script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
